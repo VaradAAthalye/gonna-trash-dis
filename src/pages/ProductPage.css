@@ -1,0 +1,140 @@
+/* src/pages/ProductPage.css */
+
+.product-page {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.product-gallery {
+  position: sticky;
+  top: 2rem;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.artisan-credit {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.artisan-credit span {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s;
+}
+
+.artisan-credit:hover span {
+  text-decoration-color: var(--primary);
+}
+
+.product-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  opacity: 0.9;
+}
+
+/* Identity Section (USP) */
+.identity-section {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--primary);
+}
+
+.section-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.icon-gold {
+  color: #fbbf24;
+}
+
+.maker-details {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.maker-details li {
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.maker-details li strong {
+  color: var(--text-main);
+}
+
+.view-story-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Actions */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-large {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .product-gallery {
+    position: static;
+  }
+  .action-buttons {
+    flex-direction: column;
+  }
+}
